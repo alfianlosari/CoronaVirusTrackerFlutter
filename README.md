@@ -2,6 +2,10 @@
 
 ![Alt text](./promo.jpg?raw=true "Corona Virus Tracker & Advices Flutter App")
 
+
+## Try the web app dev preview
+https://alfian-flutter-coronatracker.firebaseapp.com/
+
 ## Features
 - Current statistics of global total confirmed, deaths, recovered cases.
 - Statistics of countries and regions total cases count
@@ -18,6 +22,3 @@
 ## Getting Started
 - Clone or download
 - Build and Run
-
-## Try the web app dev preview
-https://alfian-flutter-coronatracker.firebaseapp.com/

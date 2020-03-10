@@ -1,0 +1,33 @@
+name: CoronaTracker
+description: A Corona Virus Tracker and Advice App
+
+version: 1.0.0+2
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.3
+  json_annotation: ^3.0.1
+  charts_flutter: ^0.9.0
+  intl: ^0.16.1
+  google_maps_flutter: ^0.5.24+1
+  google_maps: ^3.4.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  json_serializable: ^3.2.5
+  build_runner: ^1.8.0
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - Assets/who_corona_advice.json

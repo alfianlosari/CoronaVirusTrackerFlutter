@@ -9,8 +9,8 @@ part of 'corona_case.dart';
 CoronaCase _$CoronaCaseFromJson(Map<String, dynamic> json) {
   return CoronaCase(
     id: json['OBJECTID'] as int,
-    state: json['Province_State'] as String,
-    country: json['Country_Region'] as String,
+    state: json['Province_State'] as String ?? '',
+    country: json['Country_Region'] as String ?? '',
     latitude: (json['Lat'] as num)?.toDouble(),
     longitude: (json['Long_'] as num)?.toDouble(),
     confirmed: json['Confirmed'] as int,

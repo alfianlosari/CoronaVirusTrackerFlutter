@@ -8,10 +8,10 @@ class CoronaCase {
   @JsonKey(name: "OBJECTID")
   final int id;
 
-  @JsonKey(name: "Province_State")
+  @JsonKey(name: "Province_State", defaultValue: '')
   final String state;
 
-  @JsonKey(name: "Country_Region")
+  @JsonKey(name: "Country_Region", defaultValue: '')
   final String country;
 
   // @JsonKey(name: "Last_Update")

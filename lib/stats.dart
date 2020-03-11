@@ -249,18 +249,18 @@ class _StatsPage extends State<StatsPage>
                 child: Text('Error fetching total cases global data'),
               ));
         } else {
-          final List<CoronaCaseCountry> cases = snapshot.data;
-          if (cases.length == 0) {
+          if (snapshot.data == null || snapshot.data.length == 0) {
             return Padding(
               padding: EdgeInsets.only(top: 16, bottom: 16),
               child: Center(child: Text("No Data")),
             );
           }
 
+          final List<CoronaCaseCountry> cases = snapshot.data;
           var children = List<Widget>();
 
-          final chinaCase = cases
-              .firstWhere((element) => element.country == 'Mainland China');
+          final chinaCase = cases.firstWhere(
+              (element) => element.country.toLowerCase().contains('china'));
 
           if (chinaCase != null) {
             final data = [
@@ -318,7 +318,8 @@ class _StatsPage extends State<StatsPage>
             ]);
           }
 
-          cases.removeWhere((element) => element.country == 'Mainland China');
+          cases.removeWhere(
+              (element) => element.country.toLowerCase().contains('china'));
 
           var confirmedCasesData = List<OrdinalCases>();
           var deathsCasesData = List<OrdinalCases>();
